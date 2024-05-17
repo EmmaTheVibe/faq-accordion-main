@@ -18,7 +18,6 @@ body {
 }
 .wrapper {
     top: 100px;
-    /* transform: translate(-50%, -50%); */
     position: absolute;
 }
 .bkg{
@@ -65,7 +64,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 10px; */
     color: hsl(292, 42%, 14%);
 }
 .qst {
@@ -84,7 +82,6 @@ body {
     transform: scale(1.1,1.1);
 }
 .answer {
-    /* display: none; */
     overflow: hidden;
     color: hsl(292, 16%, 49%);
     max-height: 0;
