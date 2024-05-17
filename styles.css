@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: hsl(275, 100%, 97%)
+}
+.wrapper {
+    top: 100px;
+    /* transform: translate(-50%, -50%); */
+    position: absolute;
+}
+.bkg{
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center top;
+    height: 230px;
+    width: 100%;
+}
+.container {
+    width: 550px;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 32px 18px 32px;
+    border-radius: 12px;
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 10px;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.title p {
+    font-weight: 700;
+    font-size: 38px;
+}
+.title img {
+    margin-right: 15px;
+}
+.section {
+    width: 100%;
+    border-bottom: 2px solid hsl(275, 100%, 97%);
+    transition: height 1s linear;
+    padding: 15px 0px 15px 0px;
+}
+.section:last-of-type{
+    border-bottom: none;
+}
+.question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+    color: hsl(292, 42%, 14%);
+}
+.qst {
+    font-size: 16px;
+    font-weight: 600;
+}
+.question:hover {
+    cursor: pointer;
+}
+.qst:hover{
+    cursor: pointer;
+    color: hsl(276, 60%, 49%);
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+.answer {
+    /* display: none; */
+    overflow: hidden;
+    color: hsl(292, 16%, 49%);
+    max-height: 0;
+    transition: .3s ease;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+.answer p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 90%;
+}
+.section.active .answer{
+    display: block;
+    max-height: 100px;
+    padding: 15px 0px 5px 0px;
+}
+.attribution{
+    margin: 10px 0px 10px 0px;
+}
+@media screen and (max-width: 565px){
+    .bkg{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        height: 210px;
+    }
+    .container{
+        width: 320px;
+    }
+    .title img {
+        width: 30px;
+    }
+    .title p {
+        font-size: 28px;
+    }
+    .qst {
+        font-size: 14px;
+        width: 80%;
+    }
+    .btn {
+        width: 26px;
+    }
+    .answer p {
+        font-size: 12px;
+        line-height: 16px;
+        width: 96%;
+    }
+    .section.active .answer{
+        display: block;
+        max-height: 300px;
+        padding: 15px 0px 5px 0px;
+    }
+}
